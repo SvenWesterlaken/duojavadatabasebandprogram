@@ -1,4 +1,5 @@
 package duoopdracht;
+import duoopdracht.BandAdd.BandAddFrame;
 import javax.swing.*;
 import java.awt.event.*; 
 import javax.swing.border.*;
@@ -80,8 +81,12 @@ public class HomePanel extends JPanel{
     }
         class OpenHandler implements ActionListener {
         
-        public void actionPerformed( ActionEvent e ) {
-         
+          public void actionPerformed( ActionEvent e ) {
+              if (e.getSource() == btntoevoegen) {
+                  new BandAddFrame();
+              } else if (e.getSource () == btntoevoegen2) {
+                  
+              }
           }   
         }
 }

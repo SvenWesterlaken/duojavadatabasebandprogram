@@ -20,7 +20,7 @@ public class HomeFrame extends JFrame{
     public HomeFrame(){
             
       
-    setSize( 750, 500 );
+    setSize( 750, 200 );
     setLocation(100, 20);    //added 
     setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
     
