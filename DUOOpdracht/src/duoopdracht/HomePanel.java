@@ -11,9 +11,9 @@ public class HomePanel extends JPanel{
     
     
  JPanel HomePanel = new JPanel();
- private JLabel labelwelkom, labelbeschrijving, labelnamen, labelbands, labelpodium, labeloptreden;
+ private JLabel labelwelkom, labelbeschrijving, labelnamen, labelbands, labelpodium, labeloptreden, labelschool, labelklas;
  private JButton btntoevoegen, btntoevoegen2, btntoevoegen3 , btnverwijder ,btnverwijder2,btnverwijder3 , 
- btnwijzig, btnwijzig2, btnwijzig3;
+ btnwijzig, btnwijzig2, btnwijzig3, btnview, btnview2, btnview3;
      
         public HomePanel(){   
         labelwelkom = new JLabel("Welkom");
@@ -30,6 +30,9 @@ public class HomePanel extends JPanel{
             
         btnwijzig = new JButton("wijzig");
         btnwijzig.addActionListener(new OpenHandler());
+        
+        btnview = new JButton("View");
+        btnview.addActionListener(new OpenHandler());
             
             
         labeloptreden = new JLabel("optreden");
@@ -44,7 +47,9 @@ public class HomePanel extends JPanel{
             
          btnwijzig2 = new JButton("wijzig");
          btnwijzig2.addActionListener(new OpenHandler());
-            
+         
+         btnview2 = new JButton("View");
+         btnview2.addActionListener(new OpenHandler());
             
           labelpodium = new JLabel ("podium");
           labelpodium.setHorizontalAlignment(JLabel.LEFT);
@@ -58,26 +63,37 @@ public class HomePanel extends JPanel{
             btnwijzig3 = new JButton("wijzig");
             btnwijzig3.addActionListener(new OpenHandler());
             
+            btnview3 = new JButton("View");
+            btnview3.addActionListener(new OpenHandler());
+            
             labelnamen = new JLabel("Kevin en Sven");
+            labelklas = new JLabel("23IVT1C");
+            labelschool = new JLabel("Avans Breda");
             
             add(labelbands);
             add(btntoevoegen);
             add(btnverwijder);
             add(btnwijzig);
+            add(btnview);
             
             add(labeloptreden);
             add(btntoevoegen2);
             add(btnverwijder2);
             add(btnwijzig2);
+            add(btnview2);
+            
             
             add(labelpodium);
             add(btntoevoegen3);
             add(btnverwijder3);
             add(btnwijzig3);
+            add(btnview3);
             
             add(labelnamen);
+            add(labelklas);
+            add(labelschool);
                   
-        setLayout (new GridLayout (4,5,10,8));
+        setLayout (new GridLayout (4,6,8,8));
     }
         class OpenHandler implements ActionListener {
         
@@ -85,7 +101,27 @@ public class HomePanel extends JPanel{
               if (e.getSource() == btntoevoegen) {
                   new BandAddFrame();
               } else if (e.getSource () == btntoevoegen2) {
-                  
+                  new OptredenAddFrame();
+              } else if (e.getSource() == btntoevoegen3) {
+                  new PodiumAddFrame();
+              } else if (e.getSource() == btnverwijder) {
+                  new BandDelFrame();
+              } else if (e.getSource() == btnverwijder2) {
+                  new OptredenDelFrame();
+              } else if (e.getSource() == btnverwijder3) {
+                  new PodiumDelFrame();
+              } else if (e.getSource() == btnwijzig) {
+                  new BandWijzigFrame();
+              } else if (e.getSource() == btnwijzig2) {
+                  new OptredenWijzigFrame();
+              } else if (e.getSource() == btnwijzig3) {
+                  new PodiumWijzigFrame();
+              } else if (e.getSource() == btnview) {
+                  new BandViewFrame();
+              } else if (e.getSource() == btnview2) {
+                  new OptredenViewFrame();
+              } else if (e.getSource() == btnview3) {
+                  new PodiumViewFrame();
               }
           }   
         }
