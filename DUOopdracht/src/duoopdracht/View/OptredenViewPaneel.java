@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package duoopdracht.BandAdd;
+package duoopdracht.View;
 
 /**
  *
  * @author Sven
  */
-public class BandAddPaneel {
+public class OptredenViewPaneel {
     
 }

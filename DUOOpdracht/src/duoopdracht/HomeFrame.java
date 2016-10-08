@@ -24,7 +24,7 @@ public class HomeFrame extends JFrame{
     setLocation(100, 20);    //added 
     setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
     
-    setTitle( "Opdracht 4.1" );
+    setTitle( "EventManager 1.0" );
     setContentPane( new HomePanel() );
     setVisible( true );
       }

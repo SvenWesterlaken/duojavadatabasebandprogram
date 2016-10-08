@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package duoopdracht.BandAdd;
+package duoopdracht.Change;
 
 import javax.swing.JFrame;
-
 
 /**
  *
  * @author Sven
  */
-public class BandAddFrame extends JFrame{
-    public BandAddFrame() {
+public class PodiumChangeFrame extends JFrame{
+    public PodiumChangeFrame(){
         JFrame frame = this;
         frame.setSize(400,400);
         frame.setVisible(true);

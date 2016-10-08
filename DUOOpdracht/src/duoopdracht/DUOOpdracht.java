@@ -4,24 +4,38 @@
  * and open the template in the editor.
  */
 package duoopdracht;
-import javax.swing.*;
-import java.awt.event.*; 
-import javax.swing.border.*;
-import java.awt.Color;
-import java.awt.GridLayout;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
- * @author kvand
+ * @author Kevin & Sven
  */
 public class DUOOpdracht {
 
     /**
-     * @param args the command line arguments
+     * 
+     * @param args 
+     * @throws java.sql.SQLException 
      */
-    public static void main(String[] args) {
-        HomeFrame hf = new HomeFrame();
-       
+    public static void main(String[] args) throws SQLException {
+        HomeFrame HF = new HomeFrame();
+        
+        
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/DUO_1", "root", "");
+        Statement statement = connection.createStatement();
+        ResultSet resultset = statement.executeQuery("SELECT * FROM band_artiest;");
+        
+        while (resultset.next()) {
+            int Sleutel = resultset.getInt("Sleutel");
+            String Naam = resultset.getString("Naam");
+            String Beschrijving = resultset.getString("Beschrijving");
+            System.out.println(Sleutel + " " + Naam + " " + Beschrijving);
+        }
     }
     
 }
