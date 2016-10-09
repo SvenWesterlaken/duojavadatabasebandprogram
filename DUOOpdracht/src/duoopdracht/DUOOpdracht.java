@@ -30,17 +30,10 @@ public class DUOOpdracht {
                          Username: 'Root', Password: Geen
             Root is het standaard 'administrator' account in de database
         */
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/DUO_1", "root", "");
-        Statement statement = connection.createStatement();
-        ResultSet resultset = statement.executeQuery("SELECT * FROM band_artiest;");
+        
         
         /*
-        while (resultset.next()) {
-            int Sleutel = resultset.getInt("Sleutel");
-            String Naam = resultset.getString("Naam");
-            String Beschrijving = resultset.getString("Beschrijving");
-            System.out.println(Sleutel + " " + Naam + " " + Beschrijving);
-        }
+        
         */
     }
     

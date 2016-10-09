@@ -15,6 +15,7 @@ public class BandViewFrame extends JFrame{
     public BandViewFrame() {
         JFrame frame = this;
         frame.setSize(400,400);
+        setTitle( "Bekijk Bands en Artiesten" );
         frame.setVisible(true);
     }
 }

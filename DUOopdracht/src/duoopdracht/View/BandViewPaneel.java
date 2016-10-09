@@ -12,5 +12,5 @@ import duoopdracht.Add.*;
  * @author Sven
  */
 public class BandViewPaneel {
-    
+      
 }
