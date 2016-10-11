@@ -5,24 +5,39 @@
  */
 package duoopdracht;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Sven
  */
 public class Band {
-    private int bandID;
-    private String naam;
-    private String beschrijving;
 
-    public Band() {
-        
-    }
+    public int bandID;
+    public String BandNaam;
+    public String BandBeschrijving;
 
     public Band(int id, String na, String beschr) {
         bandID = id;
-        naam = na;
-        beschrijving = beschr;
-        
-        System.out.println(naam);
+        BandNaam = na;
+        BandBeschrijving = beschr;
     }
+
+    public int getBandID() {
+        return bandID;
+    }
+
+    public String getBandNaam() {
+        return BandNaam;
+    }
+
+    public String getBandBeschrijving() {
+        return BandBeschrijving;
+    }
+    
+    
+   @Override
+   public String toString() {
+        return ("ID: " + this.getBandID() + " Naam: " + this.getBandNaam() + " Beschrijving: " + this.getBandBeschrijving());
+   }
 }

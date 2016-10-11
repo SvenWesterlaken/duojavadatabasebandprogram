@@ -14,14 +14,16 @@ import javax.swing.JTextArea;
  * @author Sven
  */
 public class BandViewPaneel extends JPanel{
-    private JTextArea textArea;
+    public JTextArea textArea;
     private final static String newline = "\n";
     
       public BandViewPaneel() {
-        textArea = new JTextArea(30, 30);
+        textArea = new JTextArea(25, 30);
         JScrollPane scrollPane = new JScrollPane(textArea); 
         textArea.setEditable(false);
-        textArea.append("HOMO" + newline + "HOMO");
+        
+                
+        textArea.append(ViewDAO.getBand().toString() + newline);
         
         this.add(textArea);
       }

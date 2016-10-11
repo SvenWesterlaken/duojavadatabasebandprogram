@@ -45,6 +45,13 @@ public class ViewDAO {
         }
     }
     
+    public static ArrayList<Band> getBand() {
+        for (int i = 0; i < BandLijst.size(); i++) {
+            BandLijst.get(i);
+        }
+        return BandLijst;
+    }
+    
     public static void retrieveOptredens() throws SQLException {
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/duo_1", "root", "");
         Statement statement = connection.createStatement();
