@@ -5,12 +5,24 @@
  */
 package duoopdracht.View;
 
-import duoopdracht.Add.*;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 /**
  *
  * @author Sven
  */
-public class BandViewPaneel {
-      
+public class BandViewPaneel extends JPanel{
+    private JTextArea textArea;
+    private final static String newline = "\n";
+    
+      public BandViewPaneel() {
+        textArea = new JTextArea(30, 30);
+        JScrollPane scrollPane = new JScrollPane(textArea); 
+        textArea.setEditable(false);
+        textArea.append("HOMO" + newline + "HOMO");
+        
+        this.add(textArea);
+      }
 }

@@ -9,6 +9,14 @@ package duoopdracht;
  *
  * @author Sven
  */
-class Database {
-    
+public class Podium {
+    private String podiumID, beschrijving;
+
+    public Podium(String id, String beschr) {
+        podiumID = id;
+        beschrijving = beschr;
+        
+        System.out.println(podiumID);
+    }
+
 }

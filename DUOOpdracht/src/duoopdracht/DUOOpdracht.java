@@ -5,11 +5,7 @@
  */
 package duoopdracht;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import duoopdracht.View.*;
 
 /**
  *
@@ -20,21 +16,16 @@ public class DUOOpdracht {
     /**
      * 
      * @param args 
-     * @throws java.sql.SQLException 
      */
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args){
         HomeFrame HF = new HomeFrame();
         
-        /*
-                      -- Maak Connectie met Database DUO_1 --
-                         Username: 'Root', Password: Geen
-            Root is het standaard 'administrator' account in de database
-        */
-        
-        
-        /*
-        
-        */
+        try {
+            ViewDAO.retrieveBands();
+            ViewDAO.retrieveOptredens();
+            ViewDAO.retrievePodiums();
+        } catch (Exception e) {}               
     }
+    
     
 }

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package duoopdracht.View;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 
 /**
@@ -16,6 +16,8 @@ public class BandViewFrame extends JFrame{
         JFrame frame = this;
         frame.setSize(400,400);
         setTitle( "Bekijk Bands en Artiesten" );
+        JPanel paneel = new BandViewPaneel();
+        frame.setContentPane(paneel);
         frame.setVisible(true);
     }
 }
