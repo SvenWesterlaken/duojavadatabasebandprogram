@@ -11,19 +11,41 @@ package duoopdracht;
  */
 public class Optreden {
     private int ID;
-    private String band;
-    private String podium;
-    private String beginTijd;
-    private String eindTijd;
-
+    private String band, podium, beginTijd, eindTijd;
+    
     public Optreden(int id, String p, String begin, String eind, String b) {
         ID = id;
         podium = p;
         beginTijd = begin;
         eindTijd = eind;
         band = b;
-        
-        System.out.println(ID + podium + beginTijd + eindTijd + band);
-
     }
+    
+    public int getID() {
+        return ID;
+    }
+
+    public String getBand() {
+        return band;
+    }
+
+    public String getPodium() {
+        return podium;
+    }
+    
+    public String getBeginTijd() {
+        return beginTijd;
+    }
+    public String getEindTijd() {
+        return eindTijd;
+    }
+
+   @Override
+   public String toString() {
+        return ("ID: " + this.getID() + "\n" + 
+                "Podium: " + this.getPodium() + "\n" + 
+                "Begintijd: " + this.getBeginTijd() + "\n" +
+                "Eindtijd: " + this.getEindTijd() + "\n" +
+                "Band: " + this.getBand() + "\n");
+   }
 }
