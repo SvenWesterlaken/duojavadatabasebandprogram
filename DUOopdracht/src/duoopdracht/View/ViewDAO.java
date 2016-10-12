@@ -20,8 +20,37 @@ import java.util.ArrayList;
  * @author Sven
  */
 public class ViewDAO {
+    private static ArrayList<Band> BandLijst = new ArrayList<>();
     private static ArrayList<Optreden> OptredenLijst = new ArrayList<>();
     private static ArrayList<Podium> PodiumLijst = new ArrayList<>();
+    private static int lastID = 0;
+    
+    public static void retrieveBands() throws SQLException {
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/duo_1", "root", "");
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery("SELECT * FROM band_artiest");
+        
+        while (rs.next()) {
+            int id = rs.getInt("sleutel");
+            String name = rs.getString("naam");
+            String description = rs.getString("beschrijving");
+            
+            lastID = 0;
+            
+            Band band = new Band(id, name, description);
+                               
+            BandLijst.add(band);
+            
+            
+        }
+    }
+    
+    public static ArrayList<Band> getBand() {
+        for (int i = 0; i < BandLijst.size(); i++) {
+            BandLijst.get(i);
+        }
+        return BandLijst;
+    }
     
     public static void retrieveOptredens() throws SQLException {
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/duo_1", "root", "");
@@ -34,6 +63,8 @@ public class ViewDAO {
             String starttime = rs.getString("starttijd");
             String endtime = rs.getString("eindtijd");
             String bandID = rs.getString("Band_artiest");
+            
+            lastID = 0;
             
             Optreden optreden = new Optreden(id, podium, starttime, endtime, bandID);
                                
@@ -51,6 +82,8 @@ public class ViewDAO {
         while (rs.next()) {
             String id = rs.getString("ID");
             String description = rs.getString("Beschrijving");
+            
+            lastID = 0;
             
             Podium podium = new Podium(id, description);
                                
