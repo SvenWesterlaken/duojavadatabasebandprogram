@@ -21,9 +21,9 @@ public class DUOOpdracht {
         HomeFrame HF = new HomeFrame();
         
         try {
-            BandViewPaneel.retrieveBands();
-            OptredenViewPaneel.retrieveOptredens();
-            PodiumViewPaneel.retrievePodiums();
+            ViewDAO.retrieveBands();
+            ViewDAO.retrieveOptredens();
+            ViewDAO.retrievePodiums();
         } catch (Exception e) {}               
     }
     

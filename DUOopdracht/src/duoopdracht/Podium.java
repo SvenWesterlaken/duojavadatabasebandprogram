@@ -15,20 +15,8 @@ public class Podium {
     public Podium(String id, String beschr) {
         podiumID = id;
         beschrijving = beschr;
+        
+        System.out.println(podiumID);
     }
-    
-    public String getID() {
-        return podiumID;
-    }
-
-    public String getBeschrijving() {
-        return beschrijving;
-    }
-    
-    @Override
-    public String toString() {
-        return ("Naam: " + this.getID() + "\n" + 
-                "Beschrijving: " + this.getBeschrijving() + "\n");
-   }
 
 }

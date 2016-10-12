@@ -38,6 +38,6 @@ public class Band {
     
    @Override
    public String toString() {
-        return ("ID: " + this.getBandID() + "\n" + "Naam: " + this.getBandNaam() + "\n" + "Beschrijving: " + this.getBandBeschrijving() + "\n");
+        return ("ID: " + this.getBandID() + " Naam: " + this.getBandNaam() + " Beschrijving: " + this.getBandBeschrijving());
    }
 }
