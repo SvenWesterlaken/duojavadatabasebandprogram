@@ -5,7 +5,6 @@
  */
 package duoopdracht.View;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 /**
  *
@@ -16,8 +15,5 @@ public class OptredenViewFrame extends JFrame {
         JFrame frame = this;
         frame.setSize(400,400);
         frame.setVisible(true);
-        setTitle( "Optredens" );
-        JPanel paneel = new OptredenViewPaneel();
-        frame.setContentPane(paneel);
     }
 }
