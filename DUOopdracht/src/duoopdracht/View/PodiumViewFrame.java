@@ -6,6 +6,7 @@
 package duoopdracht.View;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -16,5 +17,8 @@ public class PodiumViewFrame extends JFrame{
         JFrame frame = this;
         frame.setSize(400,400);
         frame.setVisible(true);
+        setTitle( "Podiums" );
+        JPanel paneel = new PodiumViewPaneel();
+        frame.setContentPane(paneel);
     }
 }
