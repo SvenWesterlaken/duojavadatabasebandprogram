@@ -6,6 +6,7 @@
 package duoopdracht.Add;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -14,7 +15,11 @@ import javax.swing.JFrame;
 public class PodiumAddFrame extends JFrame{
     public PodiumAddFrame(){
         JFrame frame = this;
-        frame.setSize(400,400);
+         setSize( 750, 200 );
+        setLocation(100, 20); 
+        JPanel paneel = new PodiumAddPaneel();
+        frame.setContentPane(paneel);
         frame.setVisible(true);
+        frame.setTitle("Podium toevoegen");
     }
 }

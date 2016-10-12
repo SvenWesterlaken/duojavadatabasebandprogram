@@ -6,6 +6,7 @@
 package duoopdracht.Add;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -14,8 +15,12 @@ import javax.swing.JFrame;
 public class OptredenAddFrame extends JFrame{
     
     public OptredenAddFrame(){
-        JFrame frame = this;
-        frame.setSize(400,400);
+         JFrame frame = this;
+         setSize( 750, 200 );
+        setLocation(100, 20); 
+        JPanel paneel = new OptredenAddPaneel();
+        frame.setContentPane(paneel);
         frame.setVisible(true);
+        frame.setTitle("Optreden toevoegen");
     }
 }
